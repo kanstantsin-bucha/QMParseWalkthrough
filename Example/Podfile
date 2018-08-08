@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'QMParseWalkthrough_Example' do
+  pod 'QMParseWalkthrough', :path => '../'
+
+  target 'QMParseWalkthrough_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

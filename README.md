@@ -1,0 +1,29 @@
+# QMParseWalkthrough
+
+[![CI Status](https://img.shields.io/travis/truebucha/QMParseWalkthrough.svg?style=flat)](https://travis-ci.org/truebucha/QMParseWalkthrough)
+[![Version](https://img.shields.io/cocoapods/v/QMParseWalkthrough.svg?style=flat)](https://cocoapods.org/pods/QMParseWalkthrough)
+[![License](https://img.shields.io/cocoapods/l/QMParseWalkthrough.svg?style=flat)](https://cocoapods.org/pods/QMParseWalkthrough)
+[![Platform](https://img.shields.io/cocoapods/p/QMParseWalkthrough.svg?style=flat)](https://cocoapods.org/pods/QMParseWalkthrough)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+QMParseWalkthrough is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'QMParseWalkthrough'
+```
+
+## Author
+
+truebucha, truebucha@gmail.com
+
+## License
+
+QMParseWalkthrough is available under the MIT license. See the LICENSE file for more info.
