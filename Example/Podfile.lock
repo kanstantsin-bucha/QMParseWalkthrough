@@ -1,0 +1,41 @@
+PODS:
+  - Bolts/Tasks (1.9.0)
+  - CDBKit (1.1.1)
+  - MBProgressHUD (1.1.0)
+  - MYBlurIntroductionView (1.0.3)
+  - Parse (1.17.1):
+    - Parse/Core (= 1.17.1)
+  - Parse/Core (1.17.1):
+    - Bolts/Tasks (~> 1.9)
+  - QMParseWalkthrough (1.0.0):
+    - CDBKit
+    - MBProgressHUD
+    - MYBlurIntroductionView
+    - Parse
+
+DEPENDENCIES:
+  - QMParseWalkthrough (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - CDBKit
+    - MBProgressHUD
+    - MYBlurIntroductionView
+    - Parse
+
+EXTERNAL SOURCES:
+  QMParseWalkthrough:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  CDBKit: eb073c45d4bffbbad99dc9f2a79effbdab890ea7
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MYBlurIntroductionView: b12651c25574580472ff34989a4c5b81c157009f
+  Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
+  QMParseWalkthrough: 9e8b5da6eb422b2b6fe362d86b0cb447c7da1b1c
+
+PODFILE CHECKSUM: 8cafdac1f2990a307a90d00db64ef14dade305c0
+
+COCOAPODS: 1.5.3

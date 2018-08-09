@@ -7,12 +7,72 @@
 //
 
 #import "QMAppDelegate.h"
+#import <QMParseWalkthrough/QMWalkthroughViewController.h>
+#import <Parse/Parse.h>
 
 @implementation QMAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+#define parseAppId @""
+#define parseClientKey @""
+#define parseServer @""
+#define parseSlidesClass @""
+
+- (void) initiateParse {
+    
+    [Parse enableLocalDatastore];
+    // Initialize Parse.
+    [Parse initializeWithConfiguration:
+        [ParseClientConfiguration configurationWithBlock: ^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = parseAppId;
+        configuration.clientKey = parseClientKey;
+        configuration.server = parseServer;
+    }]];
+}
+
+- (UIViewController *) loadFromFrameworkBundle {
+    
+    NSBundle * frameworkBundle = [NSBundle bundleForClass: [QMWalkthroughViewController class]];
+    
+    NSString * id = frameworkBundle.bundleIdentifier;
+    NSString * bundleName = [id componentsSeparatedByString: @"."].lastObject;
+    
+    if (bundleName.length == 0) {
+    
+        NSLog(@"[Error]: failed to get resource bundle name");
+        return nil;
+    }
+    
+    NSURL * bundleURL = [frameworkBundle URLForResource: bundleName
+                                          withExtension: @"bundle"];
+    
+    NSBundle * resourceBundle = [NSBundle bundleWithURL: bundleURL];
+    
+    UIViewController * result = [[UIViewController alloc] initWithNibName: @"WalkthroughPanel"
+                                                                   bundle: resourceBundle];
+    return result;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [self loadFromFrameworkBundle];
+    
+    [self initiateParse];
+    
+    UINavigationController * navigation = [UINavigationController new];
+    self.window = [UIWindow new];
+    self.window.rootViewController = navigation;
+    [self.window makeKeyAndVisible];
+    
+    QMWalkthroughViewController * controller =
+        [QMWalkthroughViewController controllerWithSourceParseClass: parseSlidesClass
+                                                         completion: ^(NSError * _Nullable error) {
+         [navigation popViewControllerAnimated: YES];
+    }];
+    
+    navigation.navigationBarHidden = YES;
+    [navigation pushViewController: controller
+                          animated: YES];
+    
     return YES;
 }
 

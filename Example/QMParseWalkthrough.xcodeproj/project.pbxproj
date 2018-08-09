@@ -62,11 +62,11 @@
 		74466F3845A27442D0C38A1E /* Pods-QMParseWalkthrough_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMParseWalkthrough_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QMParseWalkthrough_Tests/Pods-QMParseWalkthrough_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7E81AB21EBD7282B239FD409 /* Pods-QMParseWalkthrough_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMParseWalkthrough_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QMParseWalkthrough_Example/Pods-QMParseWalkthrough_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		924B6AD738B0D922E9BAB9DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A4D1FC216EE4380D63DD90D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		924B6AD738B0D922E9BAB9DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A4D1FC216EE4380D63DD90D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AFA0792F04BBC91CFDB4B92B /* Pods_QMParseWalkthrough_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMParseWalkthrough_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB612F1522D637B2CEA4533A /* Pods-QMParseWalkthrough_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMParseWalkthrough_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-QMParseWalkthrough_Example/Pods-QMParseWalkthrough_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D9AB76B4B1F4606A8B63F9D7 /* QMParseWalkthrough.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = QMParseWalkthrough.podspec; path = ../QMParseWalkthrough.podspec; sourceTree = "<group>"; };
+		D9AB76B4B1F4606A8B63F9D7 /* QMParseWalkthrough.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QMParseWalkthrough.podspec; path = ../QMParseWalkthrough.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,10 +319,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QMParseWalkthrough_Example/Pods-QMParseWalkthrough_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CDBKit/CDBKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MYBlurIntroductionView/MYBlurIntroductionView.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/QMParseWalkthrough/QMParseWalkthrough.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDBKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MYBlurIntroductionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMParseWalkthrough.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
