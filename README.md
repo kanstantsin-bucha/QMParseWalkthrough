@@ -1,3 +1,5 @@
+it was Achived. Write to me on kanstantsin.bucha@icloud.com in case of any issues.
+
 # QMParseWalkthrough
 
 [![CI Status](https://img.shields.io/travis/truebucha/QMParseWalkthrough.svg?style=flat)](https://travis-ci.org/truebucha/QMParseWalkthrough)
